@@ -14,6 +14,10 @@
 		77649138278AF86A001F65ED /* weatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77649137278AF86A001F65ED /* weatherTests.swift */; };
 		77649142278AF86A001F65ED /* weatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77649141278AF86A001F65ED /* weatherUITests.swift */; };
 		77649144278AF86A001F65ED /* weatherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77649143278AF86A001F65ED /* weatherUITestsLaunchTests.swift */; };
+		77649152278AF90A001F65ED /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77649151278AF90A001F65ED /* LocationManager.swift */; };
+		77649155278B0446001F65ED /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77649154278B0446001F65ED /* WelcomeView.swift */; };
+		77649157278B06CD001F65ED /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77649156278B06CD001F65ED /* LoadingView.swift */; };
+		77649159278B0A13001F65ED /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77649158278B0A13001F65ED /* WeatherManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		7764913D278AF86A001F65ED /* weatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77649141278AF86A001F65ED /* weatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherUITests.swift; sourceTree = "<group>"; };
 		77649143278AF86A001F65ED /* weatherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		77649151278AF90A001F65ED /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		77649154278B0446001F65ED /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		77649156278B06CD001F65ED /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		77649158278B0A13001F65ED /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +102,9 @@
 		77649125278AF869001F65ED /* weather */ = {
 			isa = PBXGroup;
 			children = (
+				77649153278B01B5001F65ED /* Views */,
+				77649150278AF8DE001F65ED /* Managers */,
 				77649126278AF869001F65ED /* weatherApp.swift */,
-				77649128278AF869001F65ED /* ContentView.swift */,
 				7764912A278AF86A001F65ED /* Assets.xcassets */,
 				7764912C278AF86A001F65ED /* Preview Content */,
 			);
@@ -125,6 +134,25 @@
 				77649143278AF86A001F65ED /* weatherUITestsLaunchTests.swift */,
 			);
 			path = weatherUITests;
+			sourceTree = "<group>";
+		};
+		77649150278AF8DE001F65ED /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				77649151278AF90A001F65ED /* LocationManager.swift */,
+				77649158278B0A13001F65ED /* WeatherManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		77649153278B01B5001F65ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				77649128278AF869001F65ED /* ContentView.swift */,
+				77649154278B0446001F65ED /* WelcomeView.swift */,
+				77649156278B06CD001F65ED /* LoadingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77649159278B0A13001F65ED /* WeatherManager.swift in Sources */,
 				77649129278AF869001F65ED /* ContentView.swift in Sources */,
 				77649127278AF869001F65ED /* weatherApp.swift in Sources */,
+				77649152278AF90A001F65ED /* LocationManager.swift in Sources */,
+				77649157278B06CD001F65ED /* LoadingView.swift in Sources */,
+				77649155278B0446001F65ED /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +459,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +489,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,7 +512,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6YQWLFR45X;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,7 +537,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6YQWLFR45X;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
