@@ -24,7 +24,7 @@ struct ContentView: View {
             if let location = locationManager.location {
                 // show weather
                 if let weather = weather {
-                    Text("ok")
+                    WeatherView(weather: weather)
                 }else{
                     LoadingView().task {
                         do{
@@ -47,7 +47,7 @@ struct ContentView: View {
             
         }
         .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
-//        首选配色方案
+        // 首选配色方案
         .preferredColorScheme(.dark)
     }
 }
